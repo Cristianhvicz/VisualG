@@ -1,0 +1,59 @@
+Algoritmo "Cadastro nome Ex1"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Cristian Herchonvicz
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 10/08/2021
+Var
+// Seção de Declarações das variáveis 
+nomes: vetor[0..2] de caractere
+idade: vetor[0..2] de inteiro
+op, nome: caractere
+s :inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+enquanto op<>"3" faca
+  escreval ("Bem vindos ao nosso programa")
+  escreval ("Por favor selecione um item abaixo")
+  escreval ("(1) Cadastrar usuário")
+  escreval ("(2) Listar usuários")
+  escreval ("(3) Sair do sistema")
+  escreval ("Opção:")
+  leia (op)
+     se op="1" entao
+        s<-0
+     para s de 0 ate 2 faca
+          escreval ("Digite seu nome")
+          leia (nomes[s])
+          escreval ("Digite sua idade")
+          leia (idade[s])
+     fimpara
+     escreval ("Voltar para a tela inicial, (sim ou não)")
+     leia (op)
+          se op="sim" entao
+             s<-s+1
+          fimse
+     fimse
+
+     fimpara
+          se op="2" entao
+          para s de 0 ate 2 faca
+          escreval (nomes[s], idade[s])
+          escreval ("Voltar para a tela inicial, (sim ou não)")
+             leia (op)
+             se op="sim" entao
+             s<-s+1
+             fimse
+          fimse
+
+             se op="3" entao
+             fimalgoritmo
+             fimse
+fimse
+fimenquanto
+
+
+     
+
+Fimalgoritmo

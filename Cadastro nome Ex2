@@ -1,0 +1,99 @@
+Algoritmo "Cadastrar Nome e idade"
+// Disciplina   : [Lógica de Programação]
+// Professor   : Clovis Tavares
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Cristian Herchonivcz
+// Data atual  : 22/08/2021
+Var
+// Seção de Declarações das variáveis 
+nomes: vetor[0..4] de caractere
+idades: vetor[0..4] de caractere
+op, nome: caractere
+s: inteiro
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+enquanto op<>"5" faca
+  escreval ("Bem vindos ao nosso programa")
+  escreval ("Por favor selecione um item abaixo")
+  escreval ("(1) Cadastrar usuário")
+  escreval ("(2) Listar usuários")
+  escreval ("(3) Sair do sistema")
+  escreval ("(4) Buscar usuário")
+  escreval ("(5) Excluir usuário")
+  escreval ("Opção:")
+  leia (op)
+       se op="1" entao
+		    s<-0
+		    para s de 0 ate 4 faca
+        escreval ("Digite seu nome")
+        leia (nomes[s])
+        escreval ("Digite sua idade")
+        leia (idades[s])
+		    fimpara
+        escreval ("Voltar para a tela inicial, (sim ou não)")
+		  leia (op)
+		  se op="sim" entao
+		     s<-s+1
+		  fimse
+       fimse
+
+	    se  op="2" então
+		     s<-0
+		     para s de 0 ate 4 faca
+		 	       escreval (nomes[s] + " " + idades[s])
+		     fimpara
+		     escreval ("Voltar para a tela inicial, sim ou não?")
+		     leia (op)
+		     se op="sim" entao
+		 	     s<-s+1
+		     senao
+		 	       para s de 0 ate 4 faca
+		 		         escreval (nomes[s] + " " + idades[s])
+		 	       fimpara
+		     fimse
+	    fimse
+
+	    se op="3" entao
+		    fimalgoritmo
+	    fimse
+
+	    se op="4" entao
+		    s<-0
+		    escreval ("Digite o nome")
+		    leia (nome)
+		    para s de 0 ate 4 faca
+		 	      se nome=nomes[s] entao
+		 	 	   escreval ("Nome:", nomes[s])
+		 	 	   escreval ("Idade:", idades[s])
+               senao s=0 entao
+               escreval ("Nome incorreto")
+               fimse
+		    fimpara
+		    escreval ("Voltar para a tela inicial, (sim ou não)")
+		    leia (op)
+		    se op="sim" entao
+		 	    s<-s+1
+		    senao s=0 entao
+		 	    escreval ("Nome inexistente")
+		    fimse
+	    fimse
+
+       se op="5" entao
+		    s<-0
+		    escreval ("Digite o nome")
+		    leia (nome)
+		    para s de 0 ate 4 faca
+		 	      se nome=nomes[s] entao
+		 	 	      nomes[s] <- ""
+		 	 	      idades[s] <- ""
+		 	      fimse
+		    fimpara
+          escreval ("Voltar para a tela inicial, (sim ou não)")
+		    leia (op)
+		    se op="sim" entao
+		 	    s<-s+1
+          fimse
+       fimse
+       
+fimenquanto
+Fimalgoritmo
